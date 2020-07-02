@@ -1,0 +1,32 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: darkslateblue;
+}
+
+header {
+    width: 50%;
+    margin: 2em auto;
+    text-align: center;
+    color: lightblue;
+}
+
+h1, h2, h4 {
+    margin-top: 0;
+}
+
+header button {
+    background-color: lightblue;
+    color: darkslateblue;
+    border-radius: 10px;
+    border: none;
+    padding: 0.5em;
+    cursor: pointer;
+    outline: none;
+}
+
+header button:hover {
+    background-color: skyblue;
+}
