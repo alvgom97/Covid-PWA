@@ -9,6 +9,12 @@ async function getData() {
     .then(response => response.json());
 }
 
+async function getColor() {
+
+    return await fetch('http://www.colr.org/json/colors/random/4')
+    .then(response => response.json());
+}
+
 function updateView(data){
 
     const total = document.querySelector("header h1");
@@ -24,6 +30,23 @@ function updateView(data){
     
 }
 
+function updateBackground(data){
+
+    let body = document.querySelector("body");
+    body.style.setProperty("background", "linear-gradient(90deg, #" + data.matching_colors[0] + " 0%, #" + data.matching_colors[1] +" 50%, #" + data.matching_colors[2] + " 100%)");
+}
+
 const button = document.querySelector("header button");
 
-button.addEventListener("click", () => { getData().then(updateView)});
+button.addEventListener("click", () => {});
+
+let offline = document.createElement("p");
+offline.appendChild(document.createTextNode("Offline"));
+offline.id = "offline";
+
+if(!navigator.onLine){
+    document.querySelector("body").appendChild(offline);
+}
+
+getData().then(updateView);
+getColor().then(updateBackground);

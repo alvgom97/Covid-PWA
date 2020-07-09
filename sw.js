@@ -4,8 +4,6 @@ caches.open("my-cache").then(function (cache) {
         './index.html',
         './index.js',
         './style.css',
-        './manifest.webmanifest',
-        'icons/covid-192.png'
     ]);
 })
 
@@ -15,6 +13,8 @@ self.addEventListener('fetch', function (event) {
         fetch(event.request)
             .then(async response => {
                 if (event.request.method === 'GET') {
+                    
+                    
                     caches.open("my-cache").then(cache => cache.add(event.request));
                 }
 

@@ -3,7 +3,7 @@
 }
 
 body {
-    background-color: darkslateblue;
+    
 }
 
 header {
@@ -11,6 +11,9 @@ header {
     margin: 2em auto;
     text-align: center;
     color: lightblue;
+    background-color: rgba(71, 61, 139, 0.9);
+    padding: 1em;
+    border-radius: 10px;
 }
 
 h1, h2, h4 {
@@ -28,5 +31,16 @@ header button {
 }
 
 header button:hover {
-    background-color: skyblue;
+    background-color: lightblue;
+}
+
+#offline {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    background-color: rgba(135, 207, 235, 0.5);
+    padding: 0.5em;
+    border-radius: 10px;
+    color: maroon;
+    margin: 0;
 }
