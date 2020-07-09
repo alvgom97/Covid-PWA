@@ -11,7 +11,7 @@ async function getData() {
 
 async function getColor() {
 
-    return await fetch('http://www.colr.org/json/colors/random/4')
+    return await fetch('https://www.colr.org/json/colors/random/4')
     .then(response => response.json());
 }
 
